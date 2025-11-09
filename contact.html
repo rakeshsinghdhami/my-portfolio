@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rakesh Singh Dhami | Contact Me</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        /* ---------------- Navbar ---------------- */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+}
+
+.navbar .logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#navbar-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+#navbar-links li a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+#navbar-links li a:hover {
+    color: var(--main-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* --------------- Mobile Navbar: hide links, show only logo ---------------- */
+@media (max-width: 850px) {
+    #navbar-links {
+        display: none; /* hide menu links */
+    }
+
+    .menu-toggle {
+        display: none; /* hide hamburger if you don't want it */
+    }
+
+    .navbar .logo {
+        display: block; /* keep logo/name visible */
+        font-size: 1.4rem; /* adjust size for mobile */
+        padding: 2px 5px;
+    }
+
+    .navbar {
+        justify-content: center; /* center the logo */
+        padding: 10px 0;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/" class="logo">Rakesh.</a>
+        <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+        <ul id="navbar-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page">
+        <main class="contact-main">
+            <div class="contact-full">
+                <div class="contact-section">
+                    <div class="cs-top mobile-show">
+                        <h1>Reach Me</h1>
+                        <div class="border-line"></div>
+                    </div>
+
+                    <div class="cs-item email">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">E-mail</div>
+                            <div class="info">rakeshsinghdhamirsd@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="cs-item number">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Phone</div>
+                            <div class="info">+977 9767820010</div>
+                        </div>
+                    </div>
+                    <div class="cs-item address">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <div class="placeHolder">Address</div>
+                            <div class="info">Dhangadhi, Nepal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="contact-form">
+                    <h1>Contact Me</h1>
+                    <div class="border-line"></div>
+
+                    <div class="contact-submit-after" style="display:none;">
+                        <div class="box">
+                            <i class="fa-solid fa-circle-check csa-icon"></i>
+                            <div class="csa-text">Message sent successfully</div>
+                            <div class="csa-ok" onclick="this.parentElement.parentElement.style.display='none'">OK</div>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="form-section" novalidate>
+                        <div class="form-group name-section">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="error"><i class="fa-solid fa-circle-xmark error-icon"></i>Please fill out all the fields</div>
+                        <div class="email-error"><i class="fa-solid fa-circle-xmark error-icon"></i>Email address is not valid</div>
+                        <button type="submit" id="contact-submit" class="contact-button">
+                            <div class="contact-load">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="submit-text">Submit</div>
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="left"></div>
+            <div class="right">
+                <div class="social"><a href="https://www.facebook.com/rakeshsinghdhami06" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a></div>
+                <div class="social"><a href="https://rakeshsinghdhami.com.np" target="_blank"><i
+                            class="fa-solid fa-globe"></i></a></div>
+                <div class="social"><a href="https://www.linkedin.com/in/rakeshsinghdhami" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a></div>
+                <div class="social"><a href="https://github.com/rakeshsinghdhami" target="_blank"><i
+                            class="fa-brands fa-github"></i></a></div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="nav-touch-close" id="nav-tc-js"></div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            // Replace with your EmailJS public key
+            emailjs.init("4cDGMSyU3TLXxp3il");
+
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                // Validate fields before sending
+                if (!form.name.value || !form.email.value || !form.message.value) {
+                    document.querySelector(".error").style.display = "block";
+                    return;
+                } else {
+                    document.querySelector(".error").style.display = "none";
+                }
+
+                // Send email via EmailJS
+                emailjs.sendForm(
+                    "service_yz3yd0v", // your service ID
+                    "template_4tdjut6", // your template ID
+                    this
+                ).then(function (response) {
+                    console.log("SUCCESS!", response.status, response.text);
+                    document.querySelector(".contact-submit-after").style.display = "block";
+                    form.reset();
+                }, function (error) {
+                    console.log("FAILED...", error);
+                    alert("Failed to send message. Please try again later.");
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
